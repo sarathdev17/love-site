@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My gurl(pooju) ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;   /* allow vertical scroll */
+  overflow-y: auto;
+  background: linear-gradient(135deg, #000, #1a0015, #ff0055, #000);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  min-height: 100vh;
+}
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Screens */
+.screen {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+button {
+  max-width: 90vw;
+  word-wrap: break-word;
+}
+
+
+.screen.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.screen.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 0 30px rgba(255, 0, 120, 0.8);
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 20px rgba(255, 0, 120, 0.5); }
+  50% { text-shadow: 0 0 40px rgba(255, 0, 120, 1); }
+}
+
+button {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px;
+  background: linear-gradient(135deg, #ff2e75, #ff6b9d);
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 46, 117, 0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(255, 46, 117, 0.7);
+}
+
+button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.glow {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px #ff2e75; }
+  50% { box-shadow: 0 0 50px #ff4d94, 0 0 80px #ff2e75; }
+  100% { box-shadow: 0 0 20px #ff2e75; }
+}
+
+/* Enhanced Floating Hearts */
+.heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(135deg, #ff4d94, #ff2e75);
+  transform: rotate(45deg);
+  animation: float 12s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 77, 148, 0.8));
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(135deg, #ff4d94, #ff2e75);
+  border-radius: 50%;
+}
+
+.heart::before { top: -7px; }
+.heart::after { left: -7px; }
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(45deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) rotate(45deg) scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(405deg) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Animated Sticker Container */
+.sticker-container {
+  margin: 30px 0;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.love-sticker {
+  font-size: 150px;
+  animation: heartPulse 1.5s ease-in-out infinite, rotate360 8s linear infinite;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 120, 0.8));
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sticker-bounce {
+  font-size: 120px;
+  animation: bounceSticker 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 77, 148, 0.6));
+}
+
+@keyframes bounceSticker {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1); }
+}
+
+.sticker-spin {
+  font-size: 100px;
+  animation: spinSticker 3s linear infinite;
+  filter: drop-shadow(0 0 25px rgba(255, 140, 200, 0.7));
+}
+
+@keyframes spinSticker {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.sticker-wiggle {
+  font-size: 110px;
+  animation: wiggleSticker 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 100, 180, 0.7));
+}
+
+@keyframes wiggleSticker {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg) scale(1.1); }
+  75% { transform: rotate(15deg) scale(1.1); }
+}
+
+/* Pros & Cons */
+.pros-cons-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  max-width: 900px;
+}
+
+.box {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(255, 0, 120, 0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  animation: fadeSlideUp 0.8s ease-out;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(255, 0, 120, 0.5);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.box-sticker {
+  font-size: 80px;
+  margin: 20px 0;
+  animation: boxStickerFloat 3s ease-in-out infinite;
+}
+
+@keyframes boxStickerFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.box h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.points {
+  background: white;
+  color: #1a0015;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.points ul {
+  padding-left: 20px;
+}
+
+.points li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Letters Grid */
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.letter-card {
+  background: linear-gradient(135deg, #ff9eb3, #f7b5c6);
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.letter-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  transition: 0.6s;
+}
+
+.letter-card:hover::before {
+  left: 100%;
+}
+
+.letter-card:hover {
+  transform: translateY(-12px) scale(1.08);
+  box-shadow: 0 15px 40px rgba(255, 0, 120, 0.5);
+}
+
+.letter-card.opened {
+  background: linear-gradient(135deg, #90EE90, #98FB98);
+  animation: checkMark 0.6s ease;
+}
+
+@keyframes checkMark {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.letter-card-emoji {
+  font-size: 60px;
+  margin-bottom: 12px;
+  animation: cardEmojiFloat 2s ease-in-out infinite;
+}
+
+@keyframes cardEmojiFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.letter-card span {
+  color: #7a0033;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Letter Content */
+.letter-content {
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  margin: 20px auto;
+  animation: fadeSlideUp 1s ease-out;
+}
+
+.letter-content p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* Top Sticker for letter screens */
+.top-sticker {
+  font-size: 120px;
+  margin-bottom: 20px;
+  animation: topStickerBounce 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 100, 0.6));
+}
+
+@keyframes topStickerBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-20px) rotate(10deg) scale(1.1); }
+}
+
+/* Final Screen */
+.final-text {
+  font-size: 42px;
+  font-weight: 900;
+  opacity: 0;
+  animation: fadeFinal 3s forwards 1s, heartbeat 1.5s infinite 4s;
+  text-shadow: 0 0 30px #ff4d94;
+  font-family: 'Dancing Script', cursive;
+}
+
+.final-sub {
+  margin-top: 15px;
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeFinal 3s forwards 2.5s;
+  font-family: 'Dancing Script', cursive;
+}
+
+@keyframes fadeFinal {
+  to { opacity: 1; }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Quotes Container */
+.quotes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin-top: 40px;
+  padding: 0 20px;
+  animation: fadeSlideUp 1.5s ease-out;
+}
+
+.quote-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 0, 120, 0.3);
+  transition: all 0.4s ease;
+  animation: quoteFloat 3s ease-in-out infinite;
+}
+
+.quote-card:nth-child(1) { animation-delay: 0s; }
+.quote-card:nth-child(2) { animation-delay: 0.3s; }
+.quote-card:nth-child(3) { animation-delay: 0.6s; }
+.quote-card:nth-child(4) { animation-delay: 0.9s; }
+.quote-card:nth-child(5) { animation-delay: 1.2s; }
+.quote-card:nth-child(6) { animation-delay: 1.5s; }
+
+@keyframes quoteFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.quote-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(255, 0, 120, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.quote-card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  line-height: 1.8;
+  color: white;
+  text-align: center;
+}
+
+.final-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #fff, #ffeb3b);
+  border-radius: 50%;
+  animation: sparkleAnim 3s infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes sparkleAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0);
+  }
+}
+
+/* Canvas */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Love Message */
+#loveMessage {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0;
+  transition: 0.4s;
+  min-height: 30px;
+  text-shadow: 0 0 20px rgba(255, 46, 117, 0.8);
+}
+
+/* Romantic Popup */
+#romanticPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.popup-content {
+  background: linear-gradient(135deg, #1a0010, #2a0020);
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 50px #ff2e75;
+  animation: popupBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  max-width: 350px;
+  border: 2px solid rgba(255, 46, 117, 0.5);
+}
+
+@keyframes popupBounce {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.popup-sticker {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: popupStickerSpin 1s ease-in-out;
+}
+
+@keyframes popupStickerSpin {
+  from { transform: rotate(0deg) scale(0); }
+  to { transform: rotate(360deg) scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 24px; }
+  .box { width: 100%; }
+  .final-text { font-size: 32px; }
+  .letters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sticker-container {
+    width: 200px;
+    height: 200px;
+  }
+  .love-sticker {
+    font-size: 120px;
+  }
+  .quotes-container {
+    grid-template-columns: 1fr;
+  }
+  .letter-content {
+    padding: 25px;
+    font-size: 18px;
+  }
+  .letter-content p {
+    font-size: 20px;
+  }
+}
+
+/* Progress Indicator */
+.progress-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.progress-indicator.show {
+  opacity: 1;
+}
+
+/* Floating Emoji Decorations */
+.emoji-float {
+  position: absolute;
+  font-size: 30px;
+  animation: floatEmoji 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatEmoji {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_22b63e1b9d.mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="fireworks"></canvas>
+
+<div class="progress-indicator" id="progressIndicator">
+  Letters: <span id="letterCount">0/7</span> 💌
+</div>
+
+<script>
+// Floating hearts
+for (let i = 0; i < 40; i++) {
+  let heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.style.left = Math.random() * 100 + "%";
+  heart.style.animationDuration = (8 + Math.random() * 6) + "s";
+  heart.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(heart);
+}
+
+// Floating emojis
+const floatingEmojis = ['💕', '💝', '💖', '💗', '💓', '💞', '🌹', '🎀', '✨', '⭐'];
+for (let i = 0; i < 20; i++) {
+  let emoji = document.createElement('div');
+  emoji.classList.add('emoji-float');
+  emoji.textContent = floatingEmojis[Math.floor(Math.random() * floatingEmojis.length)];
+  emoji.style.left = Math.random() * 100 + "%";
+  emoji.style.animationDuration = (10 + Math.random() * 10) + "s";
+  emoji.style.animationDelay = Math.random() * 8 + "s";
+  document.body.appendChild(emoji);
+}
+</script>
+
+<!-- INTRO -->
+<div class="screen active" id="intro">
+  <div class="sticker-container">
+    <div class="love-sticker">💝</div>
+  </div>
+  <h1>Oi Venna Mavaleeee... 😏<br>Ready for your Valentine surprise?</h1>
+  <button class="glow" onclick="enterSite()">Enter ❤️</button>
+</div>
+
+<!-- QUESTION -->
+<div class="screen" id="question">
+  <h1>Will You Be My Valentine, Pooja? 💘🫴🏻</h1>
+  <div class="sticker-container">
+    <div class="love-sticker">💖</div>
+  </div>
+  <div style="margin-top: 20px;">
+    <button id="yesBtn" onclick="showRomanticPopup()">YES 😍</button>
+    <button id="noBtn" onmouseenter="moveNo()" ontouchstart="moveNo()">NO 🙃(hmm unaku en mela pasame ila 😤)</button>
+  </div>
+  <p id="loveMessage"></p>
+</div>
+
+<!-- PROS & CONS -->
+<div class="screen" id="pros">
+  <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 30px;">
+    Pros & Cons ❤️
+  </h1>
+
+  <div class="pros-cons-container">
+    <!-- PROS -->
+    <div class="box">
+      <div class="box-sticker">😍</div>
+      <h2>Pros 💖</h2>
+      <div class="points">
+        <ul>
+          <li>You are my peace(sometimes not😁). ☮️</li>
+          <li>You make my worst days better. 🥰</li>
+          <li>You gives me a reason to live. 🥹</li>
+          <li>You are a angel who recovered me. 🧚</li>
+          <li>Your neck is mine. 🥰</li>
+          <li>You are my forever. ♾️</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONS -->
+    <div class="box">
+      <div class="box-sticker">🤔</div>
+      <h2>Cons 😌</h2>
+      <div class="points">
+        <ul>
+          <li>You made me as a pookie. 😘</li>
+          <li>You make me miss you too much. 😢</li>
+          <li>You distract me with your cuteness. 🥰</li>
+          <li>Actually… there are no cons ❤️</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Open My Letters 💌
+  </button>
+</div>
+
+<!-- LETTERS -->
+<div class="screen" id="letters">
+  <h1 style="color: white;">I made these just for you 💌</h1>
+  <p style="opacity: 0.9; font-size: 16px; margin-top: 10px;">Tap a card to open your surprise ✨</p>
+
+  <div class="letters-grid">
+    <div class="letter-card" onclick="openLetter('rose')" id="card-rose">
+      <div class="letter-card-emoji">🌹</div>
+      <span>Rose Day</span>
+    </div>
+
+    <div class="letter-card" onclick="openLetter('chocolate')" id="card-chocolate">
+      <div class="letter-card-emoji">🍫</div>
+      <span>Chocolate Day</span>
+    </div>
+
+    <div class="letter-card" onclick="openLetter('teddy')" id="card-teddy">
+      <div class="letter-card-emoji">🧸</div>
+      <span>Teddy Day</span>
+    </div>
+
+    <div class="letter-card" onclick="openLetter('propose')" id="card-propose">
+      <div class="letter-card-emoji">💍</div>
+      <span>Propose Day</span>
+    </div>
+
+    <div class="letter-card" onclick="openLetter('promise')" id="card-promise">
+      <div class="letter-card-emoji">🤝</div>
+      <span>Promise Day</span>
+    </div>
+
+    <div class="letter-card" onclick="openLetter('hug')" id="card-hug">
+      <div class="letter-card-emoji">🤗</div>
+      <span>Hug Day</span>
+    </div>
+
+    <div class="letter-card" onclick="openLetter('kiss')" id="card-kiss">
+      <div class="letter-card-emoji">💋</div>
+      <span>Kiss Day</span>
+    </div>
+  </div>
+</div>
+
+<!-- ROSE DAY -->
+<div class="screen" id="roseDay">
+  <div class="top-sticker">🌹</div>
+  <h1 style="margin-bottom: 25px;">Rose Day</h1>
+
+  <div class="letter-content">
+    <p>
+      On this Rose Day, I don't just give you flowers…
+      I give you my heart — blooming only for you. 🌺
+      <br><br>
+      Every petal carries my love. 🌸
+      Every fragrance whispers your name. 💐
+      You are the most beautiful thing that ever happened to me. ✨
+      <br><br>
+      And just like these roses,
+      my love for you will never fade. ❤️(lite ah cringe ah irukum nga...😁)
+    </p>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- CHOCOLATE DAY -->
+<div class="screen" id="chocolateDay">
+  <div class="top-sticker">🍫</div>
+  <h1 style="margin-bottom: 25px;">Chocolate Day</h1>
+
+  <div class="letter-content">
+    <p>
+      Like chocolate, you make my life sweeter every single day. 🍬
+      <br><br>
+      You melt my heart without even trying. 💗
+      You are addictive in the most beautiful way. 😋
+      With you, even ordinary moments taste magical. ✨
+      <br><br>
+      And I would choose your sweetness,
+      over anything in this world. ❤️
+      And when we going to eat chocolate👉🏻👈🏻💗.
+    </p>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- TEDDY DAY -->
+<div class="screen" id="teddyDay">
+  <div class="top-sticker">🧸</div>
+  <h1 style="margin-bottom: 25px;">Teddy Day</h1>
+
+  <div class="letter-content">
+    <p>
+      If I could, I would send you a teddy that hugs you whenever I'm not there. 🤗
+      <br><br>
+      Something soft. ☁️
+      Something warm. 🔥
+      Something that reminds you of me. 💭
+      <br><br>
+      But until then,
+      just know my arms are always ready for you. so plz replace me with dobby😁 🤍
+    </p>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- PROPOSE DAY -->
+<div class="screen" id="proposeDay">
+  <div class="top-sticker">💍</div>
+  <h1 style="margin-bottom: 25px;">Propose Day</h1>
+
+  <div id="proposalContent">
+    <p style="font-size: 20px; margin-bottom: 25px; line-height: 1.6;">
+      Will you be mine forever? ❤️
+    </p>
+    <button onclick="acceptProposal()">YES 💖</button>
+    <button onclick="rejectProposal()">NO 😏</button>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- PROMISE DAY -->
+<div class="screen" id="promiseDay">
+  <div class="top-sticker">🤝</div>
+  <h1 style="margin-bottom: 25px;">Promise Day</h1>
+
+  <div class="letter-content">
+    <p>
+      On this Promise Day,
+      I promise to stand by you. 🛡️
+      I'm ready to change for pooja 🥹
+      <br><br>
+      Not just when things are easy. ☀️
+      But when they are hard. ⛈️
+      <br><br>
+      I promise to listen. 👂
+      To understand. 🧠
+      To protect. 🛡️
+      To love you even more on your worst days. 💕
+      <br><br>
+      This isn't just a cute promise.
+      It's a lifetime one. ❤️
+    </p>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- HUG DAY -->
+<div class="screen" id="hugDay">
+  <div class="top-sticker">🤗</div>
+  <h1 style="margin-bottom: 25px;">Hug Day</h1>
+
+  <div class="letter-content">
+    <p>
+      A hug from you feels like the safest place in this world. 🏠
+      <br><br>
+      When you hold me,
+      everything slows down. ⏰
+      Every worry disappears. 🌤️
+      Every fear fades. 💪
+      I really wanna hug from you everyday to live in a different world 🫂.
+      <br><br>
+      In your arms,
+      I find peace. ☮️
+      And honestly…
+      that's where I always want to be. ❤️
+    </p>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- KISS DAY -->
+<div class="screen" id="kissDay">
+  <div class="top-sticker">💋</div>
+  <h1 style="margin-bottom: 25px;">Kiss Day</h1>
+
+  <div class="letter-content">
+    <p>
+      A kiss from you isn't just a kiss. 💋
+      <br><br>
+      It's electricity. ⚡
+      It's warmth. 🔥
+      It's magic. ✨
+      So can i get the magic for lifetime 🥰.
+      <br><br>
+      It feels like time pauses,
+      just so the universe can watch us. 🌌
+      <br><br>
+      And if I could,
+      I would relive that moment
+      again and again forever. ❤️
+    </p>
+  </div>
+
+  <button onclick="goToLetters()" style="margin-top: 35px;">
+    Back to Letters 💌
+  </button>
+</div>
+
+<!-- FINAL -->
+<div class="screen" id="final">
+  <div class="final-overlay"></div>
+
+  <div class="top-sticker" style="margin-bottom: 30px;">💕</div>
+
+  <h1 id="finalMessage" class="final-text">
+    I really need to marry pooja ❤️
+  </h1>
+
+  <p class="final-sub">
+    You are my forever, my peace, my everything. ✨
+  </p>
+
+  <div class="quotes-container">
+    <div class="quote-card">
+      <p>"In a sea of people, my eyes will always search for you." 💫</p>
+    </div>
+    <div class="quote-card">
+      <p>"You are my today and all of my tomorrows." 🌅</p>
+    </div>
+    <div class="quote-card">
+      <p>"Every love story is beautiful, but ours is my favorite." 📖</p>
+    </div>
+    <div class="quote-card">
+      <p>"I choose you. And I'll choose you over and over. Without pause, without doubt, in a heartbeat. I'll keep choosing you." 💗</p>
+    </div>
+    <div class="quote-card">
+      <p>"You're not just my love, you're my everything." 🌟</p>
+    </div>
+     <div class="quote-card">
+      <p>"namakunu oru desam adhil iruvarum sendhu ona vazhvom." 🌟</p>
+    </div>
+    <div class="quote-card">
+      <p>"With you, I am home." 🏡</p>
+    </div>
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+</div>
+
+<!-- Romantic Popup -->
+<div id="romanticPopup">
+  <div class="popup-content">
+    <div class="popup-sticker">💘</div>
+    <p style="font-size: 22px; margin-bottom: 25px;">
+      It's your fate to be my valentine.. ✨
+    </p>
+    <button onclick="goToProsAfterPopup()">Continue 💌</button>
+  </div>
+</div>
+
+<script>
+let current = "intro";
+let noCount = 0;
+let openedLetters = new Set();
+let proposeNoCount = 0;
+
+function updateProgress() {
+  document.getElementById('letterCount').textContent = openedLetters.size + '/7';
+  if (openedLetters.size > 0) {
+    document.getElementById('progressIndicator').classList.add('show');
+  }
+}
+
+function transition(to) {
+  document.getElementById(current).classList.remove("active");
+  document.getElementById(current).classList.add("exit-left");
+  
+  setTimeout(() => {
+    document.getElementById(current).classList.remove("exit-left");
+    current = to;
+    document.getElementById(to).classList.add("active");
+  }, 800);
+}
+
+function enterSite() {
+  document.getElementById("music").play();
+  transition("question");
+}
+
+function moveNo() {
+  let btn = document.getElementById("noBtn");
+  let yesBtn = document.getElementById("yesBtn");
+  let msg = document.getElementById("loveMessage");
+
+  noCount++;
+
+  btn.style.position = "absolute";
+  btn.style.left = (Math.random() * 300 - 150) + "px";
+  btn.style.top = (Math.random() * 200 - 100) + "px";
+
+  let scale = 1 + (noCount * 0.25);
+  yesBtn.style.transform = "scale(" + scale + ")";
+  yesBtn.style.transition = "0.4s ease";
+
+  let messages = [
+    "Don't run from my love 😌❤️",
+    "My heart is chasing you 🥺",
+    "You can't escape destiny 💘",
+    "I only want you… always 💞",
+    "Say yes already, my cutie 😍"
+  ];
+
+  msg.innerText = messages[Math.min(noCount - 1, messages.length - 1)];
+  msg.style.opacity = "1";
+
+  if (noCount >= 5) {
+    btn.style.display = "none";
+    yesBtn.style.transform = "scale(2.8)";
+    msg.innerText = "See… you were meant to be mine 💖";
+  }
+}
+
+function showRomanticPopup() {
+  document.getElementById("romanticPopup").style.display = "flex";
+}
+
+function goToProsAfterPopup() {
+  document.getElementById("romanticPopup").style.display = "none";
+  transition("pros");
+}
+
+function goToLetters() {
+  if (openedLetters.size === 7) {
+    transition("final");
+    startFireworks();
+    createSparkles();
+    startConfetti();
+  } else {
+    transition("letters");
+  }
+}
+
+function openLetter(day) {
+  openedLetters.add(day);
+  updateProgress();
+  
+  document.getElementById('card-' + day).classList.add('opened');
+
+  const dayScreens = {
+    'rose': 'roseDay',
+    'chocolate': 'chocolateDay',
+    'teddy': 'teddyDay',
+    'propose': 'proposeDay',
+    'hug': 'hugDay',
+    'kiss': 'kissDay',
+    'promise': 'promiseDay'
+  };
+
+  if (dayScreens[day]) {
+    transition(dayScreens[day]);
+  }
+}
+
+function acceptProposal() {
+  document.getElementById("proposalContent").innerHTML = `
+    <div class="sticker-bounce">💝</div>
+    <p style="font-size: 18px; line-height: 1.8; max-width: 400px; margin: 0 auto;">
+      From the moment I met you,
+      I knew my heart had found its home. 🏡
+      <br><br>
+      I don't just want today.
+      I want every tomorrow with you. 🌅
+      Every laugh. 😊
+      Every fight. 💪
+      Every dream. 💭
+      <br><br>
+      Will you walk this life with me forever? ❤️
+    </p>
+  `;
+}
+
+function rejectProposal() {
+  proposeNoCount++;
+
+  if (proposeNoCount === 1) {
+    document.getElementById("proposalContent").innerHTML = `
+      <div class="sticker-wiggle">😤</div>
+      <p style="font-size: 20px; color: #ff4d94;">
+        How dare you reject my love 💔
+      </p>
+      <button onclick="retryProposal()">Okay fine… try again 😌</button>
+    `;
+  }
+}
+
+function retryProposal() {
+  proposeNoCount = 0;
+  document.getElementById("proposalContent").innerHTML = `
+    <p style="font-size: 20px; margin-bottom: 25px;">
+      Will you be mine forever? ❤️
+    </p>
+    <button onclick="acceptProposal()">YES 💖</button>
+    <button onclick="rejectProposal()">NO 😏</button>
+  `;
+}
+
+function startFireworks() {
+  const canvas = document.getElementById("fireworks");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let particles = [];
+
+  function createFirework() {
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height / 2;
+    let colors = ['#ff0055', '#ff4d94', '#ffeb3b', '#00ffff', '#ff00ff'];
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: x,
+        y: y,
+        vx: (Math.random() - 0.5) * 6,
+        vy: (Math.random() - 0.5) * 6,
+        alpha: 1,
+        color: color
+      });
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p, i) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.1;
+      p.alpha -= 0.015;
+      ctx.fillStyle = p.color.replace(')', ', ' + p.alpha + ')').replace('rgb', 'rgba');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+      ctx.fill();
+      if (p.alpha <= 0) particles.splice(i, 1);
+    });
+    requestAnimationFrame(animate);
+  }
+
+  setInterval(createFirework, 600);
+  animate();
+}
+
+function createSparkles() {
+  for (let i = 0; i < 40; i++) {
+    let sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
+    sparkle.style.left = Math.random() * 100 + "%";
+    sparkle.style.top = Math.random() * 100 + "%";
+    sparkle.style.animationDuration = (2 + Math.random() * 3) + "s";
+    sparkle.style.animationDelay = Math.random() * 2 + "s";
+    document.getElementById("final").appendChild(sparkle);
+  }
+}
+
+function startConfetti() {
+  const canvas = document.getElementById("confettiCanvas");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let confetti = [];
+
+  for (let i = 0; i < 200; i++) {
+    confetti.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 3,
+      d: Math.random() * 10,
+      color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+      tilt: Math.random() * 10 - 5,
+      tiltAngle: 0,
+      tiltAngleIncrement: Math.random() * 0.1 + 0.05
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    confetti.forEach(c => {
+      ctx.beginPath();
+      ctx.arc(c.x + c.tilt, c.y, c.r, 0, Math.PI * 2);
+      ctx.fillStyle = c.color;
+      ctx.fill();
+    });
+    update();
+    requestAnimationFrame(draw);
+  }
+
+  function update() {
+    confetti.forEach(c => {
+      c.tiltAngle += c.tiltAngleIncrement;
+      c.y += (Math.cos(c.d) + 1 + c.r / 2) * 2;
+      c.x += Math.sin(c.d);
+      c.tilt = Math.sin(c.tiltAngle) * 15;
+
+      if (c.y > canvas.height) {
+        c.y = -10;
+        c.x = Math.random() * canvas.width;
+      }
+    });
+  }
+
+  draw();
+}
+</script>
+
+</body>
+</html>
+
